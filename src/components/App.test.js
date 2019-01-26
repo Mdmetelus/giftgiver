@@ -2,24 +2,36 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
-const app = shallow(<App />);
+describe('App', () => {
+    
+    const app = shallow(<App />);
+    
+    it('renders correctly', () => {
+        expect(app).toMatchSnapshot();
+    });
+    
+    it('initializes the`state` with and empty list of gifts', () => {
+        expect(app.state().gifts).toEqual([]);
+    });
+    
 
-it('renders correctly', () => {
-    expect(app).toMatchSnapshot();
-});
+    describe('when clicking the `add-gift` button', () => {
+        beforeEach(() => {
+            app.find('.btn-add').simulate('click');
 
-it('initializes the`state` with and empty list of gifts', () => {
-    expect(app.state().gifts).toEqual([]);
-});
+        });
 
-it('adds a new gift to `state` when clicking the `add gift` button', () => {
-    app.find('.btn-add').simulate('click');
-
-    expect(app.state().gifts).toEqual([{ id: 1}]);
-});
-
-it('adds a new gift to the rendered list when clicking the `add gift` button', () => {
-    app.find('.btn-add').simulate('click');
-    expect(app.find('.gift-list').children().length).toEqual(2);
+        it('adds a new gift to `state` when clicking the `add gift` button', () => {
+            // app.find('.btn-add').simulate('click');
+        
+            expect(app.state().gifts).toEqual([{ id: 1}]);
+        });
+        
+        it('adds a new gift to the rendered list when clicking the `add gift` button', () => {
+            // app.find('.btn-add').simulate('click');
+            expect(app.find('.gift-list').children().length).toEqual(2);
+        
+        });
+    });
 
 });
