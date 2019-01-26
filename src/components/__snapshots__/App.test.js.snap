@@ -22,6 +22,9 @@ ShallowWrapper {
         <h2>
           Gift Giver
         </h2>,
+        <div
+          className="gift-list"
+        />,
         <Button
           active={false}
           block={false}
@@ -47,6 +50,18 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Gift Giver",
         "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "gift-list",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -79,6 +94,9 @@ ShallowWrapper {
           <h2>
             Gift Giver
           </h2>,
+          <div
+            className="gift-list"
+          />,
           <Button
             active={false}
             block={false}
@@ -104,6 +122,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Gift Giver",
           "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "gift-list",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
         },
         Object {
           "instance": null,
