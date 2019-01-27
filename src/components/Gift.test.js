@@ -12,6 +12,17 @@ describe('Gift', () => {
 
 
     it('initializes a person and present in `state`', ( )=> {
-        expect(gift.state()).toEqual({ preson: '', present: ''});
+        expect(gift.state()).toEqual({ preson: '', present: '', });
+    });
+
+    decribe('when typing into the person input', () => {
+        const person = 'Uncle';
+        beforeEach(() => {
+            gift.find('.input-person').simulate('change', { target: {value: person } });
+
+            it('updates the person in `state`', ( ) => {
+                expect(gift.state().person).toEqual(person);
+            });
+        });
     });
 });
