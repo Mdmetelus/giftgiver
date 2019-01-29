@@ -22,8 +22,8 @@ class Gift extends Component {
 
                     <FormGroup>
                         <ControlLabel>Present</ControlLabel>
-                        <FormControl className={input-present} 
-                        inChange={event => this.setState({ present: event.target.value}) } />
+                        <FormControl className="input-present" 
+                        inChange={event => this.setState({ present: event.target.value }) } />
                     </FormGroup>
                 </Form>
             </div>
